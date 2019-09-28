@@ -10,6 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface MableSpinner {}
+  interface PasswordReset {}
   interface StockFinder {}
   interface StockPrice {
     'stockSymbol': string;
@@ -25,6 +26,12 @@ declare global {
     new (): HTMLMableSpinnerElement;
   };
 
+  interface HTMLPasswordResetElement extends Components.PasswordReset, HTMLStencilElement {}
+  var HTMLPasswordResetElement: {
+    prototype: HTMLPasswordResetElement;
+    new (): HTMLPasswordResetElement;
+  };
+
   interface HTMLStockFinderElement extends Components.StockFinder, HTMLStencilElement {}
   var HTMLStockFinderElement: {
     prototype: HTMLStockFinderElement;
@@ -38,6 +45,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'mable-spinner': HTMLMableSpinnerElement;
+    'password-reset': HTMLPasswordResetElement;
     'stock-finder': HTMLStockFinderElement;
     'stock-price': HTMLStockPriceElement;
   }
@@ -45,6 +53,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface MableSpinner {}
+  interface PasswordReset {}
   interface StockFinder {
     'onMableSymbolSelected'?: (event: CustomEvent<string>) => void;
   }
@@ -54,6 +63,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'mable-spinner': MableSpinner;
+    'password-reset': PasswordReset;
     'stock-finder': StockFinder;
     'stock-price': StockPrice;
   }
@@ -66,6 +76,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'mable-spinner': LocalJSX.MableSpinner & JSXBase.HTMLAttributes<HTMLMableSpinnerElement>;
+      'password-reset': LocalJSX.PasswordReset & JSXBase.HTMLAttributes<HTMLPasswordResetElement>;
       'stock-finder': LocalJSX.StockFinder & JSXBase.HTMLAttributes<HTMLStockFinderElement>;
       'stock-price': LocalJSX.StockPrice & JSXBase.HTMLAttributes<HTMLStockPriceElement>;
     }
