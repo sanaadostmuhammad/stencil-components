@@ -1,5 +1,5 @@
 import { Component, h } from '@stencil/core';
-import '@ionic/core';
+// import '@ionic/core';
 
 @Component({
   tag: 'password-reset',
