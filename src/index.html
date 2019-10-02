@@ -19,7 +19,30 @@
     <stock-price stock-symbol="AAPL"></stock-price>
     <stock-finder></stock-finder>
     <password-reset></password-reset>
-
+    <worker-services></worker-services>
+    <script>
+      const workers = document.querySelector('worker-services');
+      workers.services = [
+        {
+          name: 'service',
+          id: 'sn',
+          isInfoHighPriority: true,
+          selected: true
+        },
+        {
+          name: 'service',
+          id: 'sn',
+          isInfoHighPriority: false,
+          selected: true
+        },
+        {
+          name: 'service',
+          id: 'sn',
+          isInfoHighPriority: true,
+          selected: false
+        }
+      ];
+    </script>
     <script>
       const stockFinderElement = document.querySelector('stock-finder');
       stockFinderElement.addEventListener('mableSymbolSelected', event => {

@@ -6,7 +6,12 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-
+import {
+  IWorkerService,
+} from './components/worker-services/worker-services';
+import {
+  IWorkerService as IWorkerService1,
+} from './components/worker-services/worker-services';
 
 export namespace Components {
   interface MableSpinner {}
@@ -14,6 +19,12 @@ export namespace Components {
   interface StockFinder {}
   interface StockPrice {
     'stockSymbol': string;
+  }
+  interface WorkerService {
+    'service': IWorkerService;
+  }
+  interface WorkerServices {
+    'services': IWorkerService[];
   }
 }
 
@@ -43,11 +54,25 @@ declare global {
     prototype: HTMLStockPriceElement;
     new (): HTMLStockPriceElement;
   };
+
+  interface HTMLWorkerServiceElement extends Components.WorkerService, HTMLStencilElement {}
+  var HTMLWorkerServiceElement: {
+    prototype: HTMLWorkerServiceElement;
+    new (): HTMLWorkerServiceElement;
+  };
+
+  interface HTMLWorkerServicesElement extends Components.WorkerServices, HTMLStencilElement {}
+  var HTMLWorkerServicesElement: {
+    prototype: HTMLWorkerServicesElement;
+    new (): HTMLWorkerServicesElement;
+  };
   interface HTMLElementTagNameMap {
     'mable-spinner': HTMLMableSpinnerElement;
     'password-reset': HTMLPasswordResetElement;
     'stock-finder': HTMLStockFinderElement;
     'stock-price': HTMLStockPriceElement;
+    'worker-service': HTMLWorkerServiceElement;
+    'worker-services': HTMLWorkerServicesElement;
   }
 }
 
@@ -60,12 +85,20 @@ declare namespace LocalJSX {
   interface StockPrice {
     'stockSymbol'?: string;
   }
+  interface WorkerService {
+    'service'?: IWorkerService;
+  }
+  interface WorkerServices {
+    'services'?: IWorkerService[];
+  }
 
   interface IntrinsicElements {
     'mable-spinner': MableSpinner;
     'password-reset': PasswordReset;
     'stock-finder': StockFinder;
     'stock-price': StockPrice;
+    'worker-service': WorkerService;
+    'worker-services': WorkerServices;
   }
 }
 
@@ -79,6 +112,8 @@ declare module "@stencil/core" {
       'password-reset': LocalJSX.PasswordReset & JSXBase.HTMLAttributes<HTMLPasswordResetElement>;
       'stock-finder': LocalJSX.StockFinder & JSXBase.HTMLAttributes<HTMLStockFinderElement>;
       'stock-price': LocalJSX.StockPrice & JSXBase.HTMLAttributes<HTMLStockPriceElement>;
+      'worker-service': LocalJSX.WorkerService & JSXBase.HTMLAttributes<HTMLWorkerServiceElement>;
+      'worker-services': LocalJSX.WorkerServices & JSXBase.HTMLAttributes<HTMLWorkerServicesElement>;
     }
   }
 }
