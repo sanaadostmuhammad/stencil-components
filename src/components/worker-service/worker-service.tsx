@@ -1,5 +1,5 @@
 import { Component, h, Prop, Watch, State } from '@stencil/core';
-import { IWorkerService } from '../worker-services/worker-services';
+import { IWorkerService } from '../../utils/utils';
 
 @Component({
   tag: 'worker-service',

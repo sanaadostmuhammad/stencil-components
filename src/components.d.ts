@@ -8,10 +8,7 @@
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   IWorkerService,
-} from './components/worker-services/worker-services';
-import {
-  IWorkerService as IWorkerService1,
-} from './components/worker-services/worker-services';
+} from './utils/utils';
 
 export namespace Components {
   interface MableSpinner {}

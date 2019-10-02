@@ -1,12 +1,5 @@
 import { Component, h, Prop, Watch } from '@stencil/core';
-import '@ionic/core';
-// https://github.com/ionic-team/ionic/issues/15810   ionic code compilation bug in angular environment
-export interface IWorkerService {
-  name: string;
-  id: string;
-  isInfoHighPriority: false;
-  selected: boolean;
-}
+import { IWorkerService } from '../../utils/utils';
 
 @Component({
   tag: 'worker-services',
