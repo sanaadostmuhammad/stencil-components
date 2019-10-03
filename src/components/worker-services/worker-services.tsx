@@ -10,13 +10,6 @@ export class WorkerServices {
   @Prop({ mutable: true, reflectToAttr: true, reflect: true })
   services: IWorkerService[] = [];
 
-  @Watch('data')
-  dataDidChangeHandler(newValue: string) {
-    this.services = JSON.parse(newValue);
-  }
-  componentDidLoad() {
-    console.log('Component has been rendered');
-  }
   render() {
     return [
       <ion-grid>
