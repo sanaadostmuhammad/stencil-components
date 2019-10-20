@@ -1,6 +1,6 @@
 {
   "name": "sanaa-stencil-components",
-  "version": "0.0.15",
+  "version": "0.0.22",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,12 +20,14 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "publishh": "npm install && npm run build && npm publish"
+    "publishh": "npm install && npm run build --prod && npm publish"
   },
   "devDependencies": {
-    "@stencil/core": "^1.3.3",
-    "@ionic/core": "^4.10.0"
+    "@stencil/core": "^1.7.2"
   },
+  "peerDependencies": {},
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@ionic/core": "^4.11.1"
+  }
 }
