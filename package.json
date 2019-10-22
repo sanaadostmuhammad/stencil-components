@@ -1,6 +1,6 @@
 {
   "name": "sanaa-stencil-components",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -23,11 +23,11 @@
     "publishh": "npm install && npm run build --prod && npm publish"
   },
   "devDependencies": {
-    "@stencil/core": "^1.7.2"
+    "@stencil/core": "^1.7.3"
   },
   "peerDependencies": {},
   "license": "MIT",
   "dependencies": {
-    "@ionic/core": "^4.11.1"
+    "@ionic/core": "^4.11.2"
   }
 }
