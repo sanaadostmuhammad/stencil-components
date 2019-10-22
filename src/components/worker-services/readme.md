@@ -26,6 +26,7 @@ graph TD;
   worker-services --> worker-service
   worker-service --> ion-row
   worker-service --> ion-col
+  worker-service --> ion-tab
   worker-service --> ion-item
   worker-service --> ion-label
   worker-service --> ion-checkbox

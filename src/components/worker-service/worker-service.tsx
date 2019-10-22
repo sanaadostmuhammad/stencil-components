@@ -27,6 +27,7 @@ export class WorkerService {
     return (
       <ion-row align-items-center>
         <ion-col size="10">
+          <ion-tab tab="tab1">this is an ionic core tab</ion-tab>
           <ion-item onClick={this.toggleSelection.bind(this)}>
             <ion-label text-wrap>{this.service.name}</ion-label>
             <ion-checkbox
@@ -54,19 +55,19 @@ export class WorkerService {
                   class="m-i-flipped"
                 ></ion-icon>
               ) : (
-                <ion-icon
-                  color={
-                    this.service.isInfoHighPriority ? 'primary' : 'secondary'
-                  }
-                  slot="icon-only"
-                  name="information-circle-outline"
-                ></ion-icon>
-              )}
+                  <ion-icon
+                    color={
+                      this.service.isInfoHighPriority ? 'primary' : 'secondary'
+                    }
+                    slot="icon-only"
+                    name="information-circle-outline"
+                  ></ion-icon>
+                )}
             </ion-button>
           </ion-col>
         ) : (
-          ''
-        )}
+            ''
+          )}
       </ion-row>
     );
   }
